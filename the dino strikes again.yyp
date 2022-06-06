@@ -1,6 +1,6 @@
 {
   "resources": [
-    {"id":{"name":"Object1","path":"objects/Object1/Object1.yy",},"order":0,},
+    {"id":{"name":"obj_dino","path":"objects/obj_dino/obj_dino.yy",},"order":0,},
     {"id":{"name":"spr_dino_idle","path":"sprites/spr_dino_idle/spr_dino_idle.yy",},"order":1,},
     {"id":{"name":"spr_dino_run","path":"sprites/spr_dino_run/spr_dino_run.yy",},"order":0,},
     {"id":{"name":"spr_tiles","path":"sprites/spr_tiles/spr_tiles.yy",},"order":2,},
@@ -11,7 +11,7 @@
     {"name":"Windows","path":"options/windows/options_windows.yy",},
     {"name":"operagx","path":"options/operagx/options_operagx.yy",},
   ],
-  "defaultScriptType": 0,
+  "defaultScriptType": 1,
   "isEcma": false,
   "configs": {
     "name": "Default",
