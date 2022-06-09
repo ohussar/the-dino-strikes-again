@@ -1,8 +1,5 @@
 {
-  "spriteId": {
-    "name": "spr_dino_idle",
-    "path": "sprites/spr_dino_idle/spr_dino_idle.yy",
-  },
+  "spriteId": null,
   "solid": false,
   "visible": true,
   "managed": true,
@@ -32,7 +29,7 @@
     "path": "folders/Objects.yy",
   },
   "resourceVersion": "1.0",
-  "name": "obj_dino",
+  "name": "obj_camera",
   "tags": [],
   "resourceType": "GMObject",
 }
