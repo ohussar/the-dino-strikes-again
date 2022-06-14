@@ -10,6 +10,10 @@ slotIn = -1;
 pastSlotIn = -1;
 holding = 0;
 selected = 0;
-
+gunShoot = 0;
 
 itemTypes = [obj_gun];
+
+function getGunShoot(){
+	return gunShoot;
+}

@@ -7,3 +7,6 @@ if(state == "item"){
 }else{
 	draw_self();
 }
+
+
+

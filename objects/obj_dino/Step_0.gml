@@ -1,8 +1,12 @@
-var key_left   =  keyboard_check(		 ord("A"));
-var key_right  =  keyboard_check(		 ord("D"));
-var key_up     =  keyboard_check(		 ord("W"));
-var key_down   =  keyboard_check(		 ord("S"));
-var key_collect=  keyboard_check_pressed(ord("E"));
+var key_left     =  keyboard_check(		 ord("A"));
+var key_right    =  keyboard_check(		 ord("D"));
+var key_up       =  keyboard_check(		 ord("W"));
+var key_down     =  keyboard_check(		 ord("S"));
+var key_collect  =  keyboard_check_pressed(ord("E"));
+var key_shoot    =  mouse_check_button(mb_left);
+
+gunShoot = key_shoot;
+
 
 var h = key_right - key_left;
 var v = -key_up + key_down;

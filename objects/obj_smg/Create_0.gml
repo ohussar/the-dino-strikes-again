@@ -4,8 +4,9 @@
 // Inherit the parent event
 event_inherited();
 
-spread = 3;
-shootsPerSecond = room_speed / 2.5;
-bulletSpeed = 10;
-bulletsPerShot = 2;
-
+barrelSizex = 6;
+barrelSizey = 0;
+shootsPerSecond = room_speed / 9;
+spread = 6;
+bulletSpacing = 0;
+reloadTime = room_speed * 1.8;
