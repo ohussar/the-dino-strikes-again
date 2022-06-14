@@ -12,7 +12,7 @@ function itemSelector(range){
 			for(var j = 0; j < len; j++){
 				if(!instance_exists(list[|j])) continue;
 				var dist = point_distance(x, y, list[|j].x, list[|j].y);
-				if(dist < smallest_dist){
+				if(dist < smallest_dist && list[|j].state == "item"){
 					smallest_dist = dist;
 					object = list[|j].id;
 				}

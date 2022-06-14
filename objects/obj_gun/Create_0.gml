@@ -4,5 +4,5 @@ state = "item";
 outline = false;
 type = "gun";
 
-ammo = 120;
+ammo = irandom_range(50, 120);
 magazine = 30;
