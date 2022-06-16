@@ -1,8 +1,8 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function drawGunUI(){
-	var defSizex = 50;
-	var defSizey = 50;
+	var defSizex = 30;
+	var defSizey = 30;
 	
 	defSizex *= upscale_f;
 	defSizey *= upscale_f;
@@ -10,15 +10,15 @@ function drawGunUI(){
 	var xMin = 5;
 	var yMin = display_get_gui_height() - 5;
 
-	draw_set_color(c_black);
-	draw_set_alpha(0.7);
-	draw_rectangle(xMin, yMin, xMin + defSizex, yMin-defSizey, false);
-	draw_set_alpha(1);
-
+	//draw_set_color(c_black);
+	//draw_set_alpha(0.7);
+	//draw_rectangle(xMin, yMin, xMin + defSizex, yMin-defSizey, false);
+	//draw_set_alpha(1);
+	draw_sprite_ext(spr_ammodisplay, 0, xMin, yMin, upscale_f, upscale_f, 0, c_white, 1);
 	draw_set_font(fnt_gui);
 
-	var x1 = xMin + defSizex / 2;
-	var y1 = yMin - defSizey / 2;
+	var x1 = xMin + defSizex / 2 + 1;
+	var y1 = yMin - defSizey / 2 - 8;
 	draw_set_halign(fa_center);
 	draw_set_valign(fa_center);
 	draw_set_color(c_white);

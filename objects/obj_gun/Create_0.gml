@@ -19,3 +19,8 @@ barrelSizey = -1;
 
 reloadTime = room_speed * 2;
 reloadTimer = -1;
+
+recoil = 0;
+targetRecoil = 10;
+recoilRecoverMult = 0.7;
+recoilDir = 0;

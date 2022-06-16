@@ -18,10 +18,7 @@ var input_v = lengthdir_y(mag * 2, dir);
 
 hsp = lerp(hsp, input_h, .2);
 vsp = lerp(vsp, input_v, .2);
-
-x += hsp;
-y += vsp;
-
+collision();
 switch(state){
 	case "idle":
 		sprite_index = spr_dino_idle;

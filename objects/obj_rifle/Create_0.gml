@@ -5,7 +5,12 @@
 event_inherited();
 
 spread = 3;
-shootsPerSecond = room_speed / 2.5;
+shootsPerSecond = room_speed / 3.5;
 bulletSpeed = 10;
-bulletsPerShot = 2;
+bulletsPerShot = 1;
 
+ammo = 50;
+magSize = 12;
+magazine = magSize;
+
+targetRecoil = 6;
