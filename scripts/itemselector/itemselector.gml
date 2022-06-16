@@ -20,15 +20,17 @@ function itemSelector(range){
 			ds_list_destroy(list);
 		}
 	}
-	if(smallest_dist <= range){
-		if(instance_exists(selected))
+	if(smallest_dist <= range && object != 0){
+		if(instance_exists(selected)){
 			selected.id.outline = false;
+		}
 		object.outline = true;
 		selected = object.id;
 	}
 	if(object == 0){
-		if(instance_exists(selected))
+		if(instance_exists(selected)){
 			selected.id.outline = false;
+		}
 		selected = 0;
 	}
 }	

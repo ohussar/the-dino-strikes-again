@@ -1,0 +1,1 @@
+draw_sprite_ext(spr_slime, 0, x, y+z, image_xscale, image_yscale, image_angle, image_blend, image_alpha);

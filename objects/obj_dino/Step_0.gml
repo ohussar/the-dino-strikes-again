@@ -41,7 +41,7 @@ holding.depth = depth - 5;
 itemSelector(30);
 // picking up items
 if(instance_exists(selected)){
-	if(key_collect){
+	if(key_collect && selected != 0){
 		selected.outline = false;
 		selected.state = "";
 		

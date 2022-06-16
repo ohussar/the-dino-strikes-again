@@ -24,3 +24,5 @@ recoil = 0;
 targetRecoil = 10;
 recoilRecoverMult = 0.7;
 recoilDir = 0;
+
+damage = 2;

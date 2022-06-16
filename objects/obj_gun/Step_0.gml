@@ -38,7 +38,7 @@ if(shootTimer <= 0 && obj_dino.getGunShoot() && magazine > 0 && reloadTimer == -
 		blt.speed = bulletSpeed;
 		blt.direction = dir;
 		blt.image_angle = dir;
-		
+		blt.damage = damage;
 		if(collision_line(obj_dino.x, obj_dino.y, blt.x, blt.y, obj_wall, true, true)){
 			instance_destroy(blt);
 		}

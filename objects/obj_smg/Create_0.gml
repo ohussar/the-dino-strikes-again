@@ -12,3 +12,4 @@ bulletSpacing = 0;
 reloadTime = room_speed * 1.8;
 targetRecoil = 3;
 recoilRecoverMult = 0.8;
+damage = 1.5;
