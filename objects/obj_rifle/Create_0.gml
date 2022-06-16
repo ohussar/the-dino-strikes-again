@@ -13,6 +13,8 @@ ammo = 50;
 magSize = 12;
 magazine = magSize;
 
-targetRecoil = 6;
+targetRecoil = 7;
 
-damage = 10;
+damage = 20;
+pierce = true;
+falloff = 0.65;

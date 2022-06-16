@@ -14,6 +14,9 @@ function drawGunUI(){
 	//draw_set_alpha(0.7);
 	//draw_rectangle(xMin, yMin, xMin + defSizex, yMin-defSizey, false);
 	//draw_set_alpha(1);
+	
+	// displaying ammo and magazine
+	
 	draw_sprite_ext(spr_ammodisplay, 0, xMin, yMin, upscale_f, upscale_f, 0, c_white, 1);
 	draw_set_font(fnt_gui);
 
@@ -33,14 +36,14 @@ function drawGunUI(){
 
 	draw_set_halign(-1);
 	draw_set_valign(-1);
-	
+	// drawing the reload state box
 	if(obj_dino.holding.reloadTimer != -1){
 		var barSizex = 40*upscale_f;
 		var barSizey = 5*upscale_f;
 		var cx = camera_get_view_x(view_camera[0])
         var cy = camera_get_view_y(view_camera[0])
 		var barX = (obj_dino.x-cx)*upscale_f - barSizex/2;
-		var barY = (obj_dino.bbox_top-cy)*upscale_f - 5*upscale_f - barSizey / 2;
+		var barY = (obj_dino.bbox_top-cy)*upscale_f - 6*upscale_f - barSizey / 2;
 		draw_rectangle(barX, barY, barX + barSizex * (1 - (obj_dino.holding.reloadTimer / obj_dino.holding.reloadTime)), barY - barSizey, false);
 	}
 }

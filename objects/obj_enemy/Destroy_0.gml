@@ -1,0 +1,1 @@
+createParticle(x, y, irandom_range(4, 8));

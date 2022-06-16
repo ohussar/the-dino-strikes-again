@@ -1,3 +1,5 @@
+event_inherited();
+
 jumpTimer--;
 
 if(jumpTimer <= 0){
@@ -24,13 +26,28 @@ if(instance_exists(target)){
 	
 	var targetHsp = lengthdir_x(spd, targetDir) * can;
 	var targetVsp = lengthdir_y(spd, targetDir) * can;
+	var temph = 0;
+	var tempv = 0;
+	// repulsion between enemies
+	with(obj_enemy){
+		if(id != other.id){
+			var dir = point_direction(other.x, other.y, x, y);
+			var f = 1 / (point_distance(other.x, other.y, x, y)^4);
+			temph += -dcos(dir)*f;
+			tempv += +dsin(dir)*f;
+			
+			temph = clamp(temph, -1.5, 1.5);
+			tempv = clamp(tempv, -1.5, 1.5);
+			
+		}
+	}
 	
-	hsp = lerp(hsp, targetHsp, .6);
-	vsp = lerp(vsp, targetVsp, .6);
-	
-	if(hsp != 0){
-		image_xscale = sign(hsp);	
-	}	
+	hsp = lerp(hsp, (targetHsp+temph)*can, .6);
+	vsp = lerp(vsp, (targetVsp+tempv)*can, .6);
+
+	if(sign(x-target.x) != 0){
+		image_xscale = -sign(x-target.x);	
+	}
 }
 
 collision();

@@ -17,6 +17,9 @@ if(recoil > 5){
 	obj_dino.hsp -= lengthdir_x(1, recoilDir);
 	obj_dino.vsp -= lengthdir_y(1, recoilDir);
 }
+
+// shooting logic
+
 if(shootTimer <= 0 && obj_dino.getGunShoot() && magazine > 0 && reloadTimer == -1){
 	magazine--;
 	shootTimer = shootsPerSecond;
@@ -39,6 +42,9 @@ if(shootTimer <= 0 && obj_dino.getGunShoot() && magazine > 0 && reloadTimer == -
 		blt.direction = dir;
 		blt.image_angle = dir;
 		blt.damage = damage;
+		blt.pierce = pierce;
+		blt.falloff = falloff;
+		
 		if(collision_line(obj_dino.x, obj_dino.y, blt.x, blt.y, obj_wall, true, true)){
 			instance_destroy(blt);
 		}
@@ -47,7 +53,7 @@ if(shootTimer <= 0 && obj_dino.getGunShoot() && magazine > 0 && reloadTimer == -
 	}
 	
 }
-
+// all of reload logic
 var key_reload = keyboard_check_pressed(ord("R"));
 
 if(key_reload && ammo > 0 && magazine < magSize) {
@@ -62,5 +68,8 @@ if(reloadTimer == 0){
 	if(ammo - toFill >= 0){
 		ammo -= toFill;
 		magazine+=toFill;
+	}else if(ammo>0 && ammo - toFill < 0 ){
+		magazine += ammo;
+		ammo = 0;
 	}
 }

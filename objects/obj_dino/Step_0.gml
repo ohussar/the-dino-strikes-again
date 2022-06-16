@@ -42,6 +42,11 @@ itemSelector(30);
 // picking up items
 if(instance_exists(selected)){
 	if(key_collect && selected != 0){
+		
+		if(selected.type == "chest") {
+			selected.open();
+			return;
+		}
 		selected.outline = false;
 		selected.state = "";
 		

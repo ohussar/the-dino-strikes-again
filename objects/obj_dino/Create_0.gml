@@ -12,7 +12,7 @@ holding = 0;
 selected = 0;
 gunShoot = 0;
 
-itemTypes = [obj_gun];
+itemTypes = [obj_gun, obj_chest];
 
 function getGunShoot(){
 	return gunShoot;
