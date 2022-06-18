@@ -91,7 +91,3 @@ for(var i = min_; i <= max_; i++){
 		if(slotIn > array_length(inventory)-1) slotIn = pastSlotIn;
 	}
 }
-
-
-
-

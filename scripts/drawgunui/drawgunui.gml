@@ -1,11 +1,11 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
-function drawGunUI(){
+function drawGunUI(upscale){
 	var defSizex = 30;
 	var defSizey = 30;
 	
-	defSizex *= upscale_f;
-	defSizey *= upscale_f;
+	defSizex *= upscale;
+	defSizey *= upscale;
 
 	var xMin = 5;
 	var yMin = display_get_gui_height() - 5;
@@ -17,20 +17,20 @@ function drawGunUI(){
 	
 	// displaying ammo and magazine
 	
-	draw_sprite_ext(spr_ammodisplay, 0, xMin, yMin, upscale_f, upscale_f, 0, c_white, 1);
+	draw_sprite_ext(spr_ammodisplay, 0, xMin, yMin, upscale, upscale, 0, c_white, 1);
 	draw_set_font(fnt_gui);
-
+	
 	var x1 = xMin + defSizex / 2 + 1;
-	var y1 = yMin - defSizey / 2 - 8;
+	var y1 = yMin - defSizey / 2 - 4;
 	draw_set_halign(fa_center);
 	draw_set_valign(fa_center);
 	draw_set_color(c_white);
 
-	var font_size = (upscale_f + 2) * 12 / 2;
+	var font_size = 12*1.5/2 + 2;
 
 
-	draw_text_transformed(x1, y1, obj_dino.holding.magazine, upscale_f + 2, upscale_f + 2, 0);
-	draw_text_transformed(x1, y1+font_size, obj_dino.holding.ammo, upscale_f, upscale_f, 0);
+	draw_text_transformed(x1, y1, obj_dino.holding.magazine, upscale+upscale/2, upscale+upscale/2, 0);
+	draw_text_transformed(x1, y1+font_size, obj_dino.holding.ammo, upscale, upscale, 0);
 
 
 
@@ -38,12 +38,12 @@ function drawGunUI(){
 	draw_set_valign(-1);
 	// drawing the reload state box
 	if(obj_dino.holding.reloadTimer != -1){
-		var barSizex = 40*upscale_f;
-		var barSizey = 5*upscale_f;
+		var barSizex = 40*upscale;
+		var barSizey = 5*upscale;
 		var cx = camera_get_view_x(view_camera[0])
         var cy = camera_get_view_y(view_camera[0])
-		var barX = (obj_dino.x-cx)*upscale_f - barSizex/2;
-		var barY = (obj_dino.bbox_top-cy)*upscale_f - 6*upscale_f - barSizey / 2;
+		var barX = (obj_dino.x-cx)*upscale - barSizex/2;
+		var barY = (obj_dino.bbox_top-cy)*upscale - 6*upscale - barSizey / 2;
 		draw_rectangle(barX, barY, barX + barSizex * (1 - (obj_dino.holding.reloadTimer / obj_dino.holding.reloadTime)), barY - barSizey, false);
 	}
 }

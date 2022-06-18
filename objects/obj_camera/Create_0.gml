@@ -10,3 +10,5 @@ camera_set_view_size(cam, size_w, size_h);
 window_set_size(size_w * upscale_f, size_h * upscale_f);
 display_reset(1, true);
 to_follow = obj_dino;
+
+surface_resize(application_surface, size_w, size_h);
